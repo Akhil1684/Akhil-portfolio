@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akhil Mandala | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(135deg,#1f005c,#5b0060,#870160,#ac255e,#ca485c,#e16b5c,#f39060,#ffb56b);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color:white;
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    display:flex;
+    justify-content:center;
+    padding:15px;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+header{
+    text-align:center;
+    padding:150px 20px 100px;
+}
+
+header h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+header p{
+    margin-top:15px;
+    font-size:20px;
+    opacity:0.9;
+}
+
+section{
+    padding:80px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:32px;
+    font-weight:600;
+}
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.skill{
+    background:rgba(255,255,255,0.2);
+    padding:12px 25px;
+    margin:10px;
+    border-radius:30px;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+}
+
+.skill:hover{
+    background:#ffd700;
+    color:black;
+    transform:scale(1.1);
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:rgba(255,255,255,0.15);
+    padding:25px;
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+    color:#ffd700;
+}
+
+.project-card ul{
+    margin-left:20px;
+    margin-bottom:15px;
+}
+
+.project-card li{
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+.tech{
+    font-weight:600;
+    font-size:14px;
+    color:#fff;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    display:inline-block;
+    margin:15px;
+    text-decoration:none;
+    background:#ffd700;
+    color:black;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.contact a:hover{
+    background:white;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,0.4);
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<header>
+<h1>Akhil Mandala</h1>
+<p>B.Tech (2025 Graduate) | Java | SQL | AWS | Cloud & ML Enthusiast</p>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="about">
+I am a 2025 B.Tech graduate with strong expertise in Java, SQL, AWS Cloud, and Machine Learning concepts. 
+I enjoy building secure, scalable systems and solving real-world problems using cloud and AI technologies.
+</div>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<div class="skills">
+<div class="skill">Java</div>
+<div class="skill">SQL</div>
+<div class="skill">AWS</div>
+<div class="skill">Python</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">Cloud Computing</div>
+<div class="skill">Database Management</div>
+<div class="skill">Problem Solving</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+
+<div class="project-card">
+<h3>Privacy-Preserving Data Sharing Using Secured Group</h3>
+<ul>
+<li>Designed secure group-based cloud data sharing system.</li>
+<li>Implemented encryption algorithms for data confidentiality.</li>
+<li>Developed secure authentication and authorization mechanisms.</li>
+<li>Ensured data integrity using controlled access policies.</li>
+<li>Prevented unauthorized data exposure in cloud environments.</li>
+<li>Optimized database queries for performance.</li>
+<li>Tested system against privacy breach scenarios.</li>
+</ul>
+<div class="tech">Technologies: Java, SQL, Encryption Techniques</div>
+</div>
+
+<div class="project-card">
+<h3>Chatbot Using Amazon Lex</h3>
+<ul>
+<li>Developed intelligent chatbot using AWS Amazon Lex.</li>
+<li>Configured intents, utterances, and slot types.</li>
+<li>Integrated chatbot with backend services.</li>
+<li>Enabled natural language understanding.</li>
+<li>Automated responses for customer queries.</li>
+<li>Tested conversational flow scenarios.</li>
+<li>Improved user interaction efficiency.</li>
+</ul>
+<div class="tech">Technologies: Amazon Lex, AWS, Cloud Services</div>
+</div>
+
+<div class="project-card">
+<h3>Insurance Fraud Detection Using Machine Learning</h3>
+<ul>
+<li>Built ML model to detect fraudulent insurance claims.</li>
+<li>Performed data preprocessing and cleaning.</li>
+<li>Applied classification algorithms for prediction.</li>
+<li>Analyzed claim patterns and anomalies.</li>
+<li>Evaluated model accuracy using performance metrics.</li>
+<li>Reduced false positives through model tuning.</li>
+<li>Visualized results for better decision insights.</li>
+</ul>
+<div class="tech">Technologies: Python, Machine Learning Algorithms, Data Analysis</div>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="contact">
+<a href="mailto:imakhil.1684@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/akhil-mandala-938561281" target="_blank">LinkedIn</a>
+<a href="https://github.com/Akhil1684" target="_blank">GitHub</a>
+</div>
+</section>
+
+<footer>
+© 2026 Akhil Mandala | All Rights Reserved
+</footer>
+
+</body>
+</html>
