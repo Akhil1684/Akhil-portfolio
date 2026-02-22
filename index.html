@@ -17,50 +17,70 @@
 }
 
 body{
-    background: linear-gradient(135deg,#1f005c,#5b0060,#870160,#ac255e,#ca485c,#e16b5c,#f39060,#ffb56b);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
+    background-size:400% 400%;
+    animation: gradient 15s ease infinite;
     color:white;
 }
 
-@keyframes gradientBG {
+@keyframes gradient{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
+/* NAVBAR */
 nav{
     position:fixed;
     width:100%;
-    top:0;
-    background:rgba(0,0,0,0.5);
-    backdrop-filter: blur(10px);
     display:flex;
     justify-content:center;
-    padding:15px;
+    padding:20px;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,0.3);
     z-index:1000;
 }
 
 nav a{
     color:white;
-    margin:0 20px;
+    margin:0 25px;
     text-decoration:none;
     font-weight:500;
     transition:0.3s;
+    position:relative;
 }
 
-nav a:hover{
-    color:#ffd700;
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#00f5d4;
+    transition:0.4s;
 }
 
+nav a:hover::after{
+    width:100%;
+}
+
+/* HERO */
 header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:150px 20px 100px;
+    padding:20px;
 }
 
 header h1{
-    font-size:48px;
-    font-weight:700;
+    font-size:50px;
+    background:linear-gradient(90deg,#00f5d4,#00bbf9,#9b5de5);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 header p{
@@ -69,25 +89,43 @@ header p{
     opacity:0.9;
 }
 
+/* SECTION */
 section{
-    padding:80px 10%;
+    padding:100px 10%;
 }
 
 h2{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:60px;
     font-size:32px;
-    font-weight:600;
+    position:relative;
 }
 
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    line-height:1.8;
-    font-size:18px;
+h2::after{
+    content:"";
+    width:60px;
+    height:4px;
+    background:#00f5d4;
+    display:block;
+    margin:15px auto 0;
+    border-radius:5px;
 }
 
+/* GLASS CARD */
+.glass{
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:40px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+    transition:0.4s;
+}
+
+.glass:hover{
+    transform:translateY(-10px);
+}
+
+/* SKILLS */
 .skills{
     display:flex;
     flex-wrap:wrap;
@@ -95,20 +133,21 @@ h2{
 }
 
 .skill{
-    background:rgba(255,255,255,0.2);
     padding:12px 25px;
-    margin:10px;
+    margin:12px;
     border-radius:30px;
-    backdrop-filter:blur(10px);
+    background:linear-gradient(135deg,#00f5d4,#9b5de5);
+    color:black;
+    font-weight:600;
     transition:0.3s;
 }
 
 .skill:hover{
-    background:#ffd700;
-    color:black;
-    transform:scale(1.1);
+    transform:scale(1.15);
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
+/* PROJECTS */
 .projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -116,26 +155,25 @@ h2{
 }
 
 .project-card{
-    background:rgba(255,255,255,0.15);
-    padding:25px;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
     border-radius:20px;
-    backdrop-filter:blur(15px);
-    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    backdrop-filter:blur(20px);
     transition:0.4s;
+    box-shadow:0 8px 30px rgba(0,0,0,0.3);
 }
 
 .project-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-12px) scale(1.03);
 }
 
 .project-card h3{
+    color:#00f5d4;
     margin-bottom:15px;
-    color:#ffd700;
 }
 
 .project-card ul{
     margin-left:20px;
-    margin-bottom:15px;
 }
 
 .project-card li{
@@ -143,12 +181,7 @@ h2{
     font-size:14px;
 }
 
-.tech{
-    font-weight:600;
-    font-size:14px;
-    color:#fff;
-}
-
+/* CONTACT */
 .contact{
     text-align:center;
 }
@@ -156,24 +189,25 @@ h2{
 .contact a{
     display:inline-block;
     margin:15px;
-    text-decoration:none;
-    background:#ffd700;
+    padding:12px 30px;
+    border-radius:40px;
+    background:linear-gradient(90deg,#00f5d4,#9b5de5);
     color:black;
-    padding:12px 25px;
-    border-radius:30px;
+    text-decoration:none;
     font-weight:600;
-    transition:0.3s;
+    transition:0.4s;
 }
 
 .contact a:hover{
-    background:white;
+    transform:scale(1.1);
+    box-shadow:0 0 25px #00f5d4;
 }
 
+/* FOOTER */
 footer{
     text-align:center;
     padding:30px;
     background:rgba(0,0,0,0.4);
-    margin-top:40px;
 }
 </style>
 </head>
@@ -189,14 +223,14 @@ footer{
 
 <header>
 <h1>Akhil Mandala</h1>
-<p>B.Tech (2025 Graduate) | Java | SQL | AWS | Cloud & ML Enthusiast</p>
+<p>B.Tech (IT) | Java | AWS | Machine Learning | Cloud Enthusiast</p>
 </header>
 
 <section id="about">
 <h2>About Me</h2>
-<div class="about">
-I am a 2025 B.Tech graduate with strong expertise in Java, SQL, AWS Cloud, and Machine Learning concepts. 
-I enjoy building secure, scalable systems and solving real-world problems using cloud and AI technologies.
+<div class="glass">
+I am a motivated B.Tech (IT) graduate with strong expertise in Java, SQL, AWS, and Machine Learning.
+Passionate about building scalable, secure, and intelligent systems.
 </div>
 </section>
 
@@ -204,13 +238,13 @@ I enjoy building secure, scalable systems and solving real-world problems using 
 <h2>Technical Skills</h2>
 <div class="skills">
 <div class="skill">Java</div>
+<div class="skill">Python</div>
 <div class="skill">SQL</div>
 <div class="skill">AWS</div>
-<div class="skill">Python</div>
 <div class="skill">Machine Learning</div>
-<div class="skill">Cloud Computing</div>
-<div class="skill">Database Management</div>
-<div class="skill">Problem Solving</div>
+<div class="skill">Git & GitHub</div>
+<div class="skill">OOP</div>
+<div class="skill">Data Structures</div>
 </div>
 </section>
 
@@ -219,45 +253,33 @@ I enjoy building secure, scalable systems and solving real-world problems using 
 <div class="projects">
 
 <div class="project-card">
-<h3>Privacy-Preserving Data Sharing Using Secured Group</h3>
+<h3>Amazon Lex Chatbot</h3>
 <ul>
-<li>Designed secure group-based cloud data sharing system.</li>
-<li>Implemented encryption algorithms for data confidentiality.</li>
-<li>Developed secure authentication and authorization mechanisms.</li>
-<li>Ensured data integrity using controlled access policies.</li>
-<li>Prevented unauthorized data exposure in cloud environments.</li>
-<li>Optimized database queries for performance.</li>
-<li>Tested system against privacy breach scenarios.</li>
+<li>Designed conversational chatbot using Amazon Lex</li>
+<li>Integrated AWS Lambda backend logic</li>
+<li>Used DynamoDB for session handling</li>
+<li>Improved response automation using intent flows</li>
 </ul>
-<div class="tech">Technologies: Java, SQL, Encryption Techniques</div>
 </div>
 
 <div class="project-card">
-<h3>Chatbot Using Amazon Lex</h3>
+<h3>Secure Privacy Database</h3>
 <ul>
-<li>Developed intelligent chatbot using AWS Amazon Lex.</li>
-<li>Configured intents, utterances, and slot types.</li>
-<li>Integrated chatbot with backend services.</li>
-<li>Enabled natural language understanding.</li>
-<li>Automated responses for customer queries.</li>
-<li>Tested conversational flow scenarios.</li>
-<li>Improved user interaction efficiency.</li>
+<li>Implemented group-based access control</li>
+<li>Enforced privacy rules using Java & SQL</li>
+<li>Maintained integrity and confidentiality</li>
+<li>Controlled selective data sharing</li>
 </ul>
-<div class="tech">Technologies: Amazon Lex, AWS, Cloud Services</div>
 </div>
 
 <div class="project-card">
-<h3>Insurance Fraud Detection Using Machine Learning</h3>
+<h3>Insurance Fraud Detection</h3>
 <ul>
-<li>Built ML model to detect fraudulent insurance claims.</li>
-<li>Performed data preprocessing and cleaning.</li>
-<li>Applied classification algorithms for prediction.</li>
-<li>Analyzed claim patterns and anomalies.</li>
-<li>Evaluated model accuracy using performance metrics.</li>
-<li>Reduced false positives through model tuning.</li>
-<li>Visualized results for better decision insights.</li>
+<li>Handled class-imbalanced datasets</li>
+<li>Applied imputation & resampling</li>
+<li>Improved recall on fraud cases</li>
+<li>Evaluated using precision & F1-score</li>
 </ul>
-<div class="tech">Technologies: Python, Machine Learning Algorithms, Data Analysis</div>
 </div>
 
 </div>
