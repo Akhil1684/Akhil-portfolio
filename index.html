@@ -3,216 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akhil Mandala | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<title>Akhil Mandala | Premium Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
-}
-
-body{
-    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c1c1c);
-    background-size:400% 400%;
-    animation: gradient 15s ease infinite;
-    color:white;
-}
-
-@keyframes gradient{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-/* NAVBAR */
-nav{
-    position:fixed;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    padding:20px;
-    backdrop-filter:blur(15px);
-    background:rgba(0,0,0,0.3);
-    z-index:1000;
-}
-
-nav a{
-    color:white;
-    margin:0 25px;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
-    position:relative;
-}
-
-nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-5px;
-    width:0%;
-    height:2px;
-    background:#00f5d4;
-    transition:0.4s;
-}
-
-nav a:hover::after{
-    width:100%;
-}
-
-/* HERO */
-header{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-header h1{
-    font-size:50px;
-    background:linear-gradient(90deg,#00f5d4,#00bbf9,#9b5de5);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-header p{
-    margin-top:15px;
-    font-size:20px;
-    opacity:0.9;
-}
-
-/* SECTION */
-section{
-    padding:100px 10%;
-}
-
-h2{
-    text-align:center;
-    margin-bottom:60px;
-    font-size:32px;
-    position:relative;
-}
-
-h2::after{
-    content:"";
-    width:60px;
-    height:4px;
-    background:#00f5d4;
-    display:block;
-    margin:15px auto 0;
-    border-radius:5px;
-}
-
-/* GLASS CARD */
-.glass{
-    background:rgba(255,255,255,0.08);
-    border-radius:20px;
-    padding:40px;
-    backdrop-filter:blur(20px);
-    box-shadow:0 8px 30px rgba(0,0,0,0.4);
-    transition:0.4s;
-}
-
-.glass:hover{
-    transform:translateY(-10px);
-}
-
-/* SKILLS */
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.skill{
-    padding:12px 25px;
-    margin:12px;
-    border-radius:30px;
-    background:linear-gradient(135deg,#00f5d4,#9b5de5);
-    color:black;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.skill:hover{
-    transform:scale(1.15);
-    box-shadow:0 5px 20px rgba(0,0,0,0.5);
-}
-
-/* PROJECTS */
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.project-card{
-    background:rgba(255,255,255,0.08);
-    padding:30px;
-    border-radius:20px;
-    backdrop-filter:blur(20px);
-    transition:0.4s;
-    box-shadow:0 8px 30px rgba(0,0,0,0.3);
-}
-
-.project-card:hover{
-    transform:translateY(-12px) scale(1.03);
-}
-
-.project-card h3{
-    color:#00f5d4;
-    margin-bottom:15px;
-}
-
-.project-card ul{
-    margin-left:20px;
-}
-
-.project-card li{
-    margin-bottom:8px;
-    font-size:14px;
-}
-
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-
-.contact a{
-    display:inline-block;
-    margin:15px;
-    padding:12px 30px;
-    border-radius:40px;
-    background:linear-gradient(90deg,#00f5d4,#9b5de5);
-    color:black;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.4s;
-}
-
-.contact a:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 25px #00f5d4;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:30px;
-    background:rgba(0,0,0,0.4);
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Space Grotesk',sans-serif;scroll-behavior:smooth}
+body{background:#050816;color:#fff;overflow-x:hidden}
+body::before{content:'';position:fixed;width:700px;height:700px;background:#00f5d4;filter:blur(250px);opacity:.12;top:-250px;left:-250px;z-index:-3}
+body::after{content:'';position:fixed;width:700px;height:700px;background:#8b5cf6;filter:blur(250px);opacity:.12;bottom:-250px;right:-250px;z-index:-3}
+.crystal{position:fixed;backdrop-filter:blur(20px);background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.15);z-index:-1;animation:float 8s ease-in-out infinite}
+.c1{width:220px;height:220px;left:-70px;top:15%;transform:rotate(45deg)}
+.c2{width:280px;height:280px;right:-90px;bottom:15%;transform:rotate(-25deg)}
+.c3{width:160px;height:160px;right:12%;top:45%;transform:rotate(60deg)}
+@keyframes float{50%{transform:translateY(-25px)}}
+nav{position:fixed;width:100%;padding:18px;display:flex;justify-content:center;gap:30px;background:rgba(0,0,0,.25);backdrop-filter:blur(12px);z-index:1000}
+nav a{text-decoration:none;color:#fff;position:relative}
+nav a:hover{color:#00f5d4}
+nav a:after{content:'';position:absolute;width:0;height:2px;background:#00f5d4;bottom:-5px;left:50%;transform:translateX(-50%);transition:.3s}
+nav a:hover:after{width:100%}
+header{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+h1{font-size:72px;background:linear-gradient(90deg,#00f5d4,#38bdf8,#8b5cf6);-webkit-background-clip:text;color:transparent}
+#typing{font-size:24px;color:#00f5d4;height:35px;margin-top:10px}
+.hero-btn{margin-top:25px;padding:14px 34px;border-radius:40px;background:linear-gradient(90deg,#00f5d4,#8b5cf6);color:#000;text-decoration:none;font-weight:700}
+.hero-btn:hover{box-shadow:0 0 25px #00f5d4;transform:translateY(-4px)}
+section{padding:100px 10%}
+h2{text-align:center;margin-bottom:40px;font-size:36px}
+.glass,.project-card{background:rgba(255,255,255,.06);backdrop-filter:blur(18px);border-radius:20px;padding:30px;border:1px solid rgba(255,255,255,.08)}
+.glass:hover{transform:translateY(-8px)}
+.skills{display:flex;flex-wrap:wrap;justify-content:center}
+.skill{margin:10px;padding:12px 22px;border-radius:30px;background:linear-gradient(135deg,#00f5d4,#8b5cf6);color:#000;font-weight:700}
+.skill:hover{transform:translateY(-8px)}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.project-link{text-decoration:none;color:white}
+.project-card{transition:.4s;position:relative;overflow:hidden}
+.project-card:before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.15),transparent);transform:translateX(-100%)}
+.project-card:hover:before{transform:translateX(100%);transition:1s}
+.project-card:hover{transform:translateY(-12px);box-shadow:0 0 25px rgba(0,245,212,.5)}
+.project-card h3{color:#00f5d4;margin-bottom:12px}
+.project-card li{margin-left:18px;margin-bottom:6px}
+.contact{text-align:center}
+.contact a{display:inline-block;margin:10px;padding:12px 25px;border-radius:30px;background:linear-gradient(90deg,#00f5d4,#8b5cf6);color:#000;text-decoration:none;font-weight:700}
+footer{text-align:center;padding:25px;background:rgba(0,0,0,.25)}
 </style>
 </head>
-
 <body>
+<div class="crystal c1"></div><div class="crystal c2"></div><div class="crystal c3"></div>
 
 <nav>
 <a href="#about">About</a>
@@ -223,65 +57,32 @@ footer{
 
 <header>
 <h1>Akhil Mandala</h1>
-<p>B.Tech (IT) | Java | AWS | Machine Learning | Cloud Enthusiast</p>
+<div id="typing"></div>
+<a href="#projects" class="hero-btn">Explore Projects</a>
 </header>
 
 <section id="about">
 <h2>About Me</h2>
 <div class="glass">
-I am a motivated B.Tech (IT) graduate with strong expertise in Java, SQL, AWS, and Machine Learning.
-Passionate about building scalable, secure, and intelligent systems.
+I am Akhil Mandala, a B.Tech Information Technology graduate with expertise in Java, Python, SQL, AWS and Machine Learning. I enjoy building scalable software solutions, learning modern technologies and solving real-world problems through innovation.
 </div>
 </section>
 
 <section id="skills">
 <h2>Technical Skills</h2>
 <div class="skills">
-<div class="skill">Java</div>
-<div class="skill">Python</div>
-<div class="skill">SQL</div>
-<div class="skill">AWS</div>
-<div class="skill">Machine Learning</div>
-<div class="skill">Git & GitHub</div>
-<div class="skill">OOP</div>
-<div class="skill">Data Structures</div>
+<div class="skill">Java</div><div class="skill">Python</div><div class="skill">SQL</div>
+<div class="skill">AWS</div><div class="skill">Machine Learning</div>
+<div class="skill">GitHub</div><div class="skill">OOP</div><div class="skill">Data Structures</div>
 </div>
 </section>
 
 <section id="projects">
 <h2>Projects</h2>
 <div class="projects">
-
-<div class="project-card">
-<h3>Amazon Lex Chatbot</h3>
-<ul>
-<li>Designed conversational chatbot using Amazon Lex</li>
-<li>Integrated AWS Lambda backend logic</li>
-<li>Used DynamoDB for session handling</li>
-<li>Improved response automation using intent flows</li>
-</ul>
-</div>
-
-<div class="project-card">
-<h3>Secure Privacy Database</h3>
-<ul>
-<li>Implemented group-based access control</li>
-<li>Enforced privacy rules using Java & SQL</li>
-<li>Maintained integrity and confidentiality</li>
-<li>Controlled selective data sharing</li>
-</ul>
-</div>
-
-<div class="project-card">
-<h3>Insurance Fraud Detection</h3>
-<ul>
-<li>Handled class-imbalanced datasets</li>
-<li>Applied imputation & resampling</li>
-<li>Improved recall on fraud cases</li>
-<li>Evaluated using precision & F1-score</li>
-</ul>
-</div>
-
+<a class="project-link" href="projects/chatbot.html"><div class="project-card"><h3>Amazon Lex Chatbot</h3><ul><li>Amazon Lex</li><li>AWS Lambda</li><li>DynamoDB</li><li>Intent Automation</li></ul></div></a>
+<a class="project-link" href="projects/privacy-database.html"><div class="project-card"><h3>Secure Privacy Database</h3><ul><li>Java & SQL</li><li>Access Control</li><li>Privacy Rules</li><li>Data Security</li></ul></div></a>
+<a class="project-link" href="projects/fraud-detection.html"><div class="project-card"><h3>Insurance Fraud Detection</h3><ul><li>Machine Learning</li><li>Data Processing</li><li>Fraud Prediction</li><li>Model Evaluation</li></ul></div></a>
 </div>
 </section>
 
@@ -289,14 +90,24 @@ Passionate about building scalable, secure, and intelligent systems.
 <h2>Contact</h2>
 <div class="contact">
 <a href="mailto:imakhil.1684@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/akhil-mandala-938561281" target="_blank">LinkedIn</a>
 <a href="https://github.com/Akhil1684" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/akhil-mandala-938561281" target="_blank">LinkedIn</a>
+<a href="resume.pdf" target="_blank">Resume</a>
 </div>
 </section>
 
-<footer>
-© 2026 Akhil Mandala | All Rights Reserved
-</footer>
+<footer>© 2026 Akhil Mandala | All Rights Reserved</footer>
 
+<script>
+const roles=['Java Developer','AWS Cloud Enthusiast','Machine Learning Engineer','Software Engineer'];
+let r=0,c=0;
+function type(){
+document.getElementById('typing').textContent=roles[r].substring(0,c);
+c++;
+if(c>roles[r].length){setTimeout(()=>{c=0;r=(r+1)%roles.length;},1000);}
+setTimeout(type,120);
+}
+type();
+</script>
 </body>
 </html>
